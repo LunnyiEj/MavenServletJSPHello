@@ -15,5 +15,11 @@ public class FormServlet extends HttpServlet {
         request.setAttribute("cup", this.cup);
         getServletContext().getRequestDispatcher("/Form.jsp").forward(request, response);
     }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("cup", this.cup);
+        if (request.getParameter("sip") != null) { cup.sip();}
+        if (request.getParameter("fillTheCup") != null) { cup.fillTheCup();}
+        getServletContext().getRequestDispatcher("/Form.jsp").forward(request, response);
+    }
 
 }

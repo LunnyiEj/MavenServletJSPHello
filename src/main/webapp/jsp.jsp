@@ -2,6 +2,7 @@
 
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 
 <html>
     <head>
@@ -14,9 +15,8 @@
         <c:set value="param.need" var="need" />
             <p>Would you like a cup of
                 <c:out value="${param.need}" default="tea" escapeXml="false"/> ?
-                <c:out value="${need}" default = "tea" escapeXml="false"/> ?
-                <c:out value="${'need'}" default = "tea" escapeXml="false"/> ?
             <p><a href="/MavenServletJSPHello/JSPServlet?need=coffee"> try need=coffee</a></p>
-            <c:if test="${param.need == 'tea'}" > Good choice! </c:if>
+        <p><a href="/MavenServletJSPHello/JSPServlet?need=tea"> try need=tea</a></p>
+        <h2><c:if test="${param.need == 'tea'}" > Good choice! </c:if></h2>
     </body>
 </html>

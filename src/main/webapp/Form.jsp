@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page isELIgnored="false" %>
 <%--
   Created by IntelliJ IDEA.
   User: LunnyiEj
@@ -11,16 +12,23 @@
 <html>
 <head>
     <title>Form + jstl</title>
+    <style>
+        body {
+            background: #e09c3e; /* Цвет фона */
+            color: #490001; /* Цвет текста */
+        }
+    </style>
 </head>
 <body>
-<c:set var="test" value="5" scope="request"/>
-<h2>В кружке <c:out value="${test}"/> глотков</h2>
-<h2>В кружке <c:out value="${'test'}"/> глотков</h2>
-<h2>В кружке <c:out value="${test}" escapeXml="false"/> глотков</h2>
-<h2>В кружке <c:out value="${'test'}" escapeXml="false"/> глотков</h2>
-${test} ${"test"}
+<center><br><br>
+<h2>В кружке <c:out value="${cup.getSipCount()}"/> глотков чая.</h2>
+<form method="post">Ваши действия? <br>
+    <input type="submit" value="Налить полную кружку" name="fillTheCup"/>
 
-<c:out value="cup.getSipCount()"/>
+    <input type="submit" value="Отхлебнуть" name="sip"/>
 
+    <br />
+</form>
+</center>
 </body>
 </html>

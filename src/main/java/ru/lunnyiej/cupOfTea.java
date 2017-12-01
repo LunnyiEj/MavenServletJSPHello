@@ -4,7 +4,7 @@ public class cupOfTea {
     private int sipCount;
 
     public cupOfTea() {
-        pourACup();
+        fillTheCup();
     }
     public int getSipCount() {
         return sipCount;
@@ -14,7 +14,7 @@ public class cupOfTea {
         if (sipCount > 0) sipCount--;
     }
 
-    public void pourACup () {
+    public void fillTheCup () {
         sipCount = 5;
     }
 }
