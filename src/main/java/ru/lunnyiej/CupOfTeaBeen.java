@@ -1,9 +1,15 @@
 package ru.lunnyiej;
 
-public class cupOfTea {
+import javax.inject.Named;
+import javax.enterprise.context.ApplicationScoped;
+import java.io.Serializable;
+
+@Named
+@ApplicationScoped
+public class CupOfTeaBeen implements Serializable {
     private int sipCount;
 
-    public cupOfTea() {
+    public CupOfTeaBeen() {
         fillTheCup();
     }
     public int getSipCount() {

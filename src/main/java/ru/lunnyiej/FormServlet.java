@@ -1,5 +1,6 @@
 package ru.lunnyiej;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +10,8 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/FormServlet", name = "FormServlet")
 public class FormServlet extends HttpServlet {
-    private final cupOfTea cup = new cupOfTea();
+    @Inject
+    private CupOfTeaBeen cup;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("cup", this.cup);

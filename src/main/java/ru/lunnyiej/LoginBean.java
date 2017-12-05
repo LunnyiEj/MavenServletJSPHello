@@ -1,12 +1,13 @@
 package ru.lunnyiej;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
+import java.io.Serializable;
 
-// Аннотации managed bean компонента
-@ManagedBean (name="Login") // определение managed bean и его наименования
-@SessionScoped             // определение времени жизни - сессия
-public class LoginBean {
+
+@Named
+@SessionScoped
+public class LoginBean implements Serializable{
     private String login;
 
     public String getLogin() {

@@ -11,10 +11,10 @@
 <h:body>
     <h:form>
         <h:outputText value="В кружке "/>
-        <h:outputText value="#{Cup.sipCount}"/>
+        <h:outputText value="#{userCupBean.sipCount}"/>
         <h:outputText value=" глотков."/>
-        <h:commandButton value="Налить полную кружку" action="#{Cup.fillTheCup}" />
-        <h:commandButton value="Отхлебнуть" action="#{Cup.sip}" />
+        <h:commandButton value="Налить полную кружку" action="#{userCupBean.fillTheCup}" />
+        <h:commandButton value="Отхлебнуть" action="#{userCupBean.sip}" />
     </h:form>
 </h:body>
 </html>

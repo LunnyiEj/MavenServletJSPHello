@@ -12,9 +12,9 @@
     <h:form>
         <h:panelGrid columns="1" border="0">
             <h:outputText value="Логин"/>
-            <h:inputText value="#{Login.login}" />
+            <h:inputText value="#{loginBean.login}" />
         </h:panelGrid>
-        <h:commandButton value="Вход" action="#{Login.link}" />
+        <h:commandButton value="Вход" action="#{loginBean.link}" />
     </h:form>
 </h:body>
 </html>
