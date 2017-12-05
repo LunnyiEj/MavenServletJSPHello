@@ -8,6 +8,15 @@ import java.io.Serializable;
 @ApplicationScoped
 public class CupOfTeaBeen implements Serializable {
     private int sipCount;
+    private String cupUser;
+
+    public String getCupUser() {
+        return cupUser;
+    }
+
+    public void setCupUser(String cupUser) {
+        this.cupUser = cupUser;
+    }
 
     public CupOfTeaBeen() {
         fillTheCup();

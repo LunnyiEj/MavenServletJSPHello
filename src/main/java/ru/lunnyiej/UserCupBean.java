@@ -12,6 +12,9 @@ public class UserCupBean {
     @Inject
     private CupOfTeaBeen cup;
 
+    @Inject
+    private LoginBean login;
+
     public int getSipCount() {
         return cup.getSipCount();
     }
@@ -22,5 +25,7 @@ public class UserCupBean {
 
     public void fillTheCup () {
         cup.fillTheCup();
+        cup.setCupUser(login.getLogin());
     }
+
 }

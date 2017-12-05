@@ -18,7 +18,7 @@ public class LoginBean implements Serializable{
         this.login = login;
     }
 
-    public boolean isLogin(){
+    public boolean isLogined(){
         if (login != null && login != ""){
             return true;
         } else {
@@ -27,10 +27,10 @@ public class LoginBean implements Serializable{
     }
 
     public String link(){
-        if (isLogin()){
-            return "cupAction?faces-redirect=true";
+        if (isLogined()){
+            return "cupAction";
         } else {
-            return "login?faces-redirect=true";
+            return "login";
         }
     }
 }
